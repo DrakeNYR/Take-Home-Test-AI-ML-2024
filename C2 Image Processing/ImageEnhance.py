@@ -67,13 +67,13 @@ def add_weight_to_image(image_path, output_path, weight_factor=0.5, blend_factor
         enhanced_image.save(output_path)
 
 
-add_weight_to_image('ImageEnhancement/16.jpg', 'ImageEnhancement/output_image.jpg', weight_factor=0.5, blend_factor=-0.1)
-adjust_rgb_channels('ImageEnhancement/output_image.jpg', 'ImageEnhancement/output_color_image.jpg', r_factor=1.1, g_factor=1.0, b_factor=1.0)
-sharpen_image('ImageEnhancement/output_color_image.jpg', 'ImageEnhancement/final_image.jpg')
+add_weight_to_image('C2 Image Processing/16.jpg', 'C2 Image Processing/output_image.jpg', weight_factor=0.5, blend_factor=-0.1)
+adjust_rgb_channels('C2 Image Processing/output_image.jpg', 'C2 Image Processing/output_color_image.jpg', r_factor=1.1, g_factor=1.0, b_factor=1.0)
+sharpen_image('C2 Image Processing/output_color_image.jpg', 'C2 Image Processing/final_image.jpg')
 
-old = cv.imread("ImageEnhancement/16.jpg")
-new = cv.imread("ImageEnhancement/final_image.jpg")
+old = cv.imread("C2 Image Processing/16.jpg")
+new = cv.imread("C2 Image Processing/final_image.jpg")
 concat = np.concatenate((old, new), axis=1)
 
-cv.imwrite("ImageEnhancement/compare.jpg", concat)
+cv.imwrite("C2 Image Processing/compare.jpg", concat)
 # cv.imshow("concat", concat)
