@@ -5,7 +5,7 @@ from ultralytics import YOLO
 #basics
 import pandas as pd
 
-path = "VC/traffic_vid.mp4"
+path = "C1 Traffic Analysis/traffic_vid.mp4"
 
 # Load pre-trained model
 model = YOLO('yolov8n.pt')
