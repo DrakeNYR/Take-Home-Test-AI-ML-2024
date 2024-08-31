@@ -28,7 +28,7 @@ llm = ChatOpenAI(
 # chat_memory = langchain.memory.ConversationBufferMemory(memory_key="chat_history", return_messages=True)
 
 def load_custom_data():
-    txt_file_path = 'RAG Chatbot/data/customdata.txt'
+    txt_file_path = 'C3 Generative AI/data/customdata.txt'
     loader = TextLoader(file_path=txt_file_path, encoding="utf-8")
     data = loader.load()
     text_splitter = CharacterTextSplitter(chunk_size=1000, chunk_overlap=300)
@@ -75,6 +75,6 @@ if prompt:
     st.session_state.messages.append({"role": "assistant", "content": response_text})
     st.session_state.chat_history.append(AIMessage(content=response_text))
 
-
+# run the app with command: streamlit run "path\to\chatbot3.py"
 
 
