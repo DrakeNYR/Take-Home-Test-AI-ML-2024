@@ -1,15 +1,6 @@
 import os
 import langchain
-# import langchain.chains.conversational_retrieval
 import langchain.chains.conversational_retrieval.base
-# import langchain.chains.conversational_retrieval.prompts
-# import langchain.chains.retrieval_qa
-# import langchain.chains.retrieval_qa.base
-# import langchain.chains.retrieval_qa.prompt
-# import langchain.llms
-# import langchain.llms.openai
-# import langchain.memory
-# import langchain.retrievers
 from langchain.document_loaders import TextLoader
 from langchain.embeddings import OpenAIEmbeddings
 from langchain.text_splitter import CharacterTextSplitter
@@ -18,8 +9,7 @@ from langchain_community.vectorstores import FAISS
 from langchain.schema import HumanMessage, AIMessage
 import streamlit as st
 
-api_key = "sk-KODx8W-JqEQq471E2C3653ogdbhnfIcoP4cP_eD9X9T3BlbkFJCrcpO9shdswAhJUTVuGJPMo_WsvLnpnTlpqsaJTSkA"
-os.environ["OPENAI_API_KEY"] = api_key
+os.environ["OPENAI_API_KEY"] = "paste in api key" # I've send in gmail
 
 llm = ChatOpenAI(
     model="gpt-3.5-turbo",
